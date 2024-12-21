@@ -8,7 +8,7 @@ const Counter = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            const digitsArray = seconds.toString().padStart(4, '0').split(' '); 
+            const digitsArray = seconds.toString().padStart(4, '0').split(''); 
 
             setDigits(digitsArray); 
             setSeconds((prevSeconds) => prevSeconds + 1); 
@@ -17,7 +17,7 @@ const Counter = () => {
    }, [seconds] ); 
 
    return (
-    <div className="bg-dark text-warning display-1 align-content-center vh-100 d-flex justify-content-center align-items-center">
+    <div className="bg-dark text-warning display-1 vh-100 d-flex justify-content-center align-items-center">
         <div className="bg-success p-5 rounded-3" style={{width: "50%"}}>
         <span><HiOutlineClock /></span>
         <p className="fs-1">Tiempo transcurrido:</p>
